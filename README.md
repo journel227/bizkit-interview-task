@@ -157,3 +157,8 @@ That means that with the examples above, the following request: http://127.0.0.1
     {"id": "4", "name": "John Smith", "age": 28, "occupation": "Architect"}
   ]
   ```
+## Run
+To run, please run the run.py file in terminal:
+```
+python run.py
+```
