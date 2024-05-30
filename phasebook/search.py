@@ -77,10 +77,13 @@ def search_users(args: Dict):
             
     # Filter by Age
     if 'age' in args:
-        query_age = int(args['age'])
-        for i, age in enumerate(get_val_for_key(USERS, 'age')):
-            if query_age in range(age - 1, age + 2):
-                filtered_list.append(USERS[i])
+        try:
+            query_age = int(args['age'])
+            for i, age in enumerate(get_val_for_key(USERS, 'age')):
+                if query_age in range(age - 1, age + 2):
+                    filtered_list.append(USERS[i])
+        except ValueError:
+            print("The age provided is not a valid integer or a numerical value.")
 
     # Filter by Occupation       
     if 'occupation' in args:
